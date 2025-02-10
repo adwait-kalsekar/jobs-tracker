@@ -3,10 +3,10 @@ import { UseGuards } from '@nestjs/common';
 
 import { User } from './models/user.model';
 import { UsersService } from './users.service';
-import CreateUserInput from './dto/create-user.input';
-import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { CurrentUser } from '../auth/decorators/current-user.decorator';
-import { TokenPayload } from '../auth/interfaces/token-payload.interface';
+import CreateUserInput from './dto/create-user.input';
+import JwtAuthGuard from '../auth/guards/jwt-auth.guard';
+import TokenPayload from '../auth/interfaces/token-payload.interface';
 
 @Resolver(() => User)
 export class UsersResolver {
