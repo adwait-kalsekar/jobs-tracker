@@ -12,7 +12,7 @@ export class AuthResolver {
   @Mutation(() => User)
   async login(
     @Args('loginInput') loginInput: LoginInput,
-    @Context() context: GqlContext
+    @Context() context: GqlContext,
   ) {
     return this.authService.login(loginInput, context.res);
   }
