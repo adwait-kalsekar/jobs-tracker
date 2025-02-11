@@ -6,7 +6,7 @@ import { compare } from 'bcryptjs';
 
 import LoginInput from './dto/login.input';
 import { UsersService } from '../users/users.service';
-import { TokenPayload } from './interfaces/token-payload.interface';
+import TokenPayload from './interfaces/token-payload.interface';
 
 @Injectable()
 export class AuthService {
